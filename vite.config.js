@@ -8,4 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    allowedHosts: ["traxaction.nextattvalabs.com"]
+  },
+  preview: {
+    allowedHosts: ["traxaction.nextattvalabs.com"]
+  }
 })
