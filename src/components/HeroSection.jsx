@@ -10,7 +10,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section id="hero" className="px-8 py-20 flex flex-col lg:flex-row items-center gap-16 max-w-7xl mx-auto pt-32">
+    <section id="features" className="px-8 py-20 flex flex-col lg:flex-row items-center gap-16 max-w-7xl mx-auto pt-32">
       <div className="flex-1 space-y-8 text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

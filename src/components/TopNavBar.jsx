@@ -6,7 +6,7 @@ const TopNavBar = () => {
   const items = ['Features', 'Compare', 'Pricing', 'API Docs'];
 
   useEffect(() => {
-    const sectionIds = ['hero', 'features', 'compare', 'pricing'];
+    const sectionIds = ['features', 'compare', 'pricing'];
     const observerOptions = {
       root: null,
       rootMargin: '-40% 0px -40% 0px',
@@ -17,8 +17,7 @@ const TopNavBar = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          if (id === 'hero') setActive('Features');
-          else if (id === 'features') setActive('Features');
+          if (id === 'features') setActive('Features');
           else if (id === 'compare') setActive('Compare');
           else if (id === 'pricing') setActive('Pricing');
         }
@@ -41,7 +40,7 @@ const TopNavBar = () => {
       <div className="hidden md:flex items-center gap-8">
         {items.map((item) => {
           const isActive = active === item;
-          const hrefId = item === 'Features' ? 'hero' : item.toLowerCase().replace(' ', '-');
+          const hrefId = item === 'Features' ? 'features' : item.toLowerCase().replace(' ', '-');
           return (
             <a
               key={item}

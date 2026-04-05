@@ -2,7 +2,7 @@ import React from 'react';
 
 const ValueBentoGrid = () => {
   return (
-    <section id="features" className="py-32 px-8 max-w-7xl mx-auto">
+    <section id="compare" className="py-32 px-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {/* Fail-Proof Checkouts */}

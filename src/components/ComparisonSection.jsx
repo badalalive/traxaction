@@ -7,7 +7,7 @@ const ComparisonSection = () => {
         <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-20 text-center">
           Manual Payments are a <span className="text-error">Support Nightmare.</span>
         </h2>
-        
+
         <div className="grid md:grid-cols-2 gap-px bg-white/5 border border-white/5">
           {/* The Mess */}
           <div className="bg-black p-12 space-y-8 status-ribbon-error">
