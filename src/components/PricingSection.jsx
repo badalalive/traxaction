@@ -5,27 +5,51 @@ const PricingSection = () => {
   const plans = [
     {
       name: 'Starter',
+      target: 'Individual developers and early-stage testing.',
       price: '$0',
       period: '/mo',
-      features: ['Up to 50 transactions/mo', 'Single chain support', 'Community discord'],
+      features: [
+        'First 5 Payments Included (Hard monthly cap)',
+        '0% Traxaction Platform Markup',
+        '15+ Major Chains Supported (ETH, SOL, BASE)',
+        'Manual Transaction Dashboard',
+        'Standard "Traxaction" Branding',
+        'Community Discord Support'
+      ],
       highlight: false,
       cta: 'Start Free'
     },
     {
-      name: 'Pro',
-      price: '$99',
+      name: 'Founder',
+      target: 'Scaling Web3 SaaS & High-Velocity Teams.',
+      price: '$29',
       period: '/mo',
-      features: ['Unlimited transactions', 'All L1 & L2 networks', 'Priority webhooks', 'Custom checkout themes'],
+      features: [
+        'Up to 100 Payments / Month',
+        '0% Traxaction Platform Markup',
+        'Instant Webhooks & API Access',
+        'White-Label Checkout UI',
+        'Advanced Reconciliation',
+        'Priority Engineering Support'
+      ],
       highlight: true,
       cta: 'Get Started'
     },
     {
-      name: 'Enterprise',
-      price: 'Custom Plan',
-      period: '',
-      features: ['White-label infrastructure', 'Dedicated node clusters', '24/7 technical support', 'Volume discounts'],
+      name: 'Growth',
+      target: 'Established platforms and agencies.',
+      price: '$89',
+      period: '/mo',
+      features: [
+        'Unlimited Monthly Payments',
+        'Custom Domain (pay.yourbrand.com)',
+        'Smart Multi-Gateway Failover',
+        'High-Volume API Rate Limits',
+        'Full Accounting Exports (CSV/JSON)',
+        '24/7 Dedicated Telegram Concierge'
+      ],
       highlight: false,
-      cta: 'Contact Sales'
+      cta: 'Scale Now'
     }
   ];
 
@@ -52,10 +76,13 @@ const PricingSection = () => {
 
               <div className="space-y-4">
                 <div>
-                  <div className={`font-label text-xs uppercase tracking-widest mb-2 ${plan.highlight ? 'text-primary' : 'text-on-surface-variant'}`}>
+                  <div className={`font-label text-xs uppercase tracking-widest mb-1 ${plan.highlight ? 'text-primary' : 'text-on-surface-variant'}`}>
                     {plan.name}
                   </div>
-                  <div className={`text-4xl font-black tracking-tighter ${plan.name === 'Enterprise' ? 'italic' : ''}`}>
+                  <p className="text-[10px] text-on-surface-variant opacity-60 mb-4 font-label uppercase tracking-widest leading-tight">
+                    {plan.target}
+                  </p>
+                  <div className="text-4xl font-black tracking-tighter">
                     {plan.price}
                     {plan.period && <span className="text-xl text-on-surface-variant font-normal">{plan.period}</span>}
                   </div>
